@@ -1,70 +1,130 @@
-# StyleSense — Virtual Stylist
+# StyleSense AI 👔
 
-**StyleSense** is a responsive web application and personal styling studio crafted with React, TypeScript, and Tailwind CSS. It delivers personalized outfit recommendations, color harmony analysis, wardrobe planning, and curated local styling rules in an elegant fashion-tech interface.
+### Your Personal AI-Powered Styling Assistant
 
----
+StyleSense AI is a smart personal styling application designed to help users create coordinated outfits from their garments. It combines garment image uploads, camera capture, color coordination, weather-aware styling, and personalized outfit recommendations in one interface.
 
-## Key Highlights & Architectural Principles
+The goal is to make everyday outfit planning easier through intelligent styling suggestions, practical recommendations, and a curated digital lookbook.
 
-- **100% Local Intelligence**: Generates complete sartorial ensembles and color harmonies without any external AI APIs or cloud services.
-- **Zero API Keys & Zero Databases**: Runs entirely client-side with persistent user data saved securely in browser `localStorage`.
-- **Fashion-Tech Aesthetics**: Warm ivory canvas (`#FAF7F2`), deep charcoal typography, muted beige accents, serif editorial headings (`Cormorant Garamond`), and clean sans body text (`Plus Jakarta Sans`).
+## ✨ Features
 
----
+- **Garment Photo Upload** — Upload a clothing photograph to use as the core piece for styling recommendations.
+- **Camera Capture** — Capture garment photos directly through the browser when camera access is available.
+- **AI-Powered Outfit Recommendations** — Generate coordinated outfit suggestions based on available garment information and styling preferences.
+- **Color Coordination** — Explore complementary colors and combinations for a more cohesive outfit.
+- **Weather-Aware Styling** — Tailor outfit suggestions to weather and temperature selections.
+- **Personalized Styling** — Configure garment details, occasion, and style preferences to guide recommendations.
+- **Curated Lookbook** — View and organize outfit ideas in a dedicated interface.
+- **Print-Friendly Reports** — Prepare outfit recommendations for printing or saving as PDF through the browser, where supported.
+- **Responsive Interface** — A clean styling workspace designed for convenient use across supported screen sizes.
+- **Privacy-Focused Design** — Designed to minimize unnecessary data storage. Actual storage and network behavior depend on the implemented features and integrations.
 
-## Features
+## 🛠️ Technology Stack
 
-1. **Editorial Home Page**: High-contrast typography, aspirational styling introduction, instant preset garment selectors, and a prominent "Style My Outfit" action.
-2. **Photo Upload with Live Preview**: Drag-and-drop or file browsing using browser-side `FileReader` (supports PNG, JPG, WEBP).
-3. **Garment Attribute Customization**: Detailed category selections (Tops, Bottoms, One-Piece, Outerwear, Footwear, Accessories), cuts, color swatches with undertones, and aesthetic styles.
-4. **Occasion Dress Codes**: Five targeted occasions: Casual, Office, Party, Date Night, and Wedding Guest, with tailored formality ratings and silhouette advice.
-5. **Local Styling Engine**: Generates 3 distinct curated looks per request:
-   - *Look 01: The Signature Ensemble* (Quintessential balance & classic pairings)
-   - *Look 02: The Contemporary Twist* (Modern proportions & high-low tension)
-   - *Look 03: Monochromatic Tonal Luxe* (Tone-on-tone textures & quiet luxury)
-6. **Weather-Based Stylist**: Climate-calibrated sartorial suggestions across 5 weather states (Sunny, Cloudy, Rainy, Windy, Cold) and 4 temperature ranges (Below 10°C, 10–19°C, 20–29°C, 30°C+). Selects breathable textiles, weather-sealed footwear, water-repellent trench coats, and protective accessories.
-7. **Outfit Calendar**: Interactive monthly and 7-day agenda views. Schedule outfits from recommendations, favorites, or custom planning. Features wear tracking ("Mark as Worn") and automatic repetition alerts to prevent over-wearing identical staples within 7 days.
-8. **Color Harmony Studio**: Interactive color wheel analysis offering Complementary, Analogous, and Monochromatic harmonies, plus the classic 60-30-10 fashion color distribution rule.
-9. **Capsule Wardrobe Planner**: Add, edit, and filter garments. Evaluates capsule versatility, occasion coverage, and category balance. Features one-click "Style This Item" integration.
-10. **Saved Lookbook**: Archive favorite looks in browser `localStorage` with personal notes, formula copying, and printable lookbook sheets.
-11. **Responsive & Accessible**: Seamlessly adapts from mobile devices to full-width 1440px desktop displays.
+The project source uses the following technologies:
 
----
+- **React** — Component-based user interface.
+- **TypeScript** — Type-safe application development.
+- **Tailwind CSS** — Utility-first styling.
+- **AI-assisted development** — Google AI Studio was used during development.
 
-## Running Locally
+*Add any additional libraries, APIs, or services only after confirming they are present in the final source code.*
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+- A modern web browser
+- The project source code
+
+### Installation
+
+Clone the repository:
 
 ```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start the Vite development server
-npm run dev
-
-# 3. Open in browser at http://localhost:3000
+git clone https://github.com/YOUR_USERNAME/stylesense-ai.git
 ```
+
+Navigate to the project directory:
+
+```bash
+cd stylesense-ai
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server using the script configured in `package.json`. For a project with a `dev` script, run:
+
+```bash
+npm run dev
+```
+
+Follow the terminal output to open the local development URL.
+
+### Production Build
+
+If the project includes a `build` script, run:
+
+```bash
+npm run build
+```
+
+Resolve any build errors before deploying the application.
+
+## 📸 How It Works
+
+1. Open the StyleSense AI application.
+2. Upload a garment photograph or capture one using the camera, if available.
+3. Select or configure the garment details, occasion, and weather preferences.
+4. Generate outfit recommendations.
+5. Review the suggested combinations, colors, and styling guidance.
+6. Save useful looks in the Lookbook and print or save a report as PDF when the feature is available.
+
+## 🔒 Privacy
+
+StyleSense AI is designed with privacy in mind.
+
+- Camera access requires browser permission.
+- Garment photos should only be processed or transmitted as required by the implemented functionality.
+- Users should be informed about any external services that receive their data.
+- Persistent storage and network requests should be reviewed before making claims that the application stores no data or processes everything locally.
+
+## 🎯 Project Goals
+
+StyleSense AI explores how modern frontend development and AI-assisted application design can be applied to personal styling.
+
+The project focuses on:
+
+- Simplifying everyday outfit selection.
+- Encouraging better color coordination.
+- Providing occasion- and weather-aware styling guidance.
+- Creating a practical, interactive styling experience.
+- Demonstrating a complete application workflow from garment input to outfit recommendations.
+
+## 🗺️ Future Improvements
+
+Potential enhancements include:
+
+- More accurate garment recognition and color detection.
+- Expanded wardrobe management.
+- More detailed personalization and styling preferences.
+- Improved print layouts and PDF reporting.
+- Additional accessibility and usability improvements.
+
+## 👨‍💻 Author
+
+
+GitHub: https://github.com/mrinmoycontent/stylesense-ai
+
+## 📄 License
+
+Choose and add a license before distributing or accepting contributions. If no license has been added, the repository's reuse permissions remain limited by default.
 
 ---
 
-## Deploying to Vercel
-
-Deploying **StyleSense** to Vercel takes under 2 minutes:
-
-1. **Push to Git**:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial StyleSense release"
-   git remote add origin <your-github-repo-url>
-   git push -u origin main
-   ```
-
-2. **Import into Vercel**:
-   - Go to [vercel.com/new](https://vercel.com/new).
-   - Select your Git repository.
-
-3. **Verify Settings & Deploy**:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-   - **Environment Variables**: *None needed* (the application runs 100% in the browser).
-   - Click **Deploy**.
+*StyleSense AI — Smarter outfit planning, one garment at a time.*
