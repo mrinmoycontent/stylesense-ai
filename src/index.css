@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #141413;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C9BC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B3A495;
+}
+
+/* Print styling for Lookbook and Stylist PDF reports */
+@media print {
+  @page {
+    margin: 1.2cm;
+    size: auto;
+  }
+
+  html, body, #root, main {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  /* Strip navigation, footers, and interactive action controls */
+  header, nav, footer, .no-print, [data-no-print="true"] {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  /* Reset fixed positioning and scroll containers during print to prevent clipped pages */
+  .fixed, .overflow-y-auto, .overflow-x-auto, .overflow-hidden, .print-modal-container {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    max-height: none !important;
+    inset: auto !important;
+  }
+
+  /* Hide the configuration sidebar (camera, uploads, selects) so only the recommendation report prints */
+  #stylist-config-form,
+  .stylist-form-panel {
+    display: none !important;
+  }
+
+  /* Expand recommendation showcase to full printable width */
+  .stylist-showcase-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-column: span 12 / span 12 !important;
+  }
+
+  /* Ensure cards, rows, and sections do not break awkwardly across page breaks */
+  .print-break-inside-avoid, article, tr, .print-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .print-page-break-after {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  /* Remove distracting drop shadows and force crisp print colors */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

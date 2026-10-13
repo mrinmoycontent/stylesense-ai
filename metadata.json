@@ -1,0 +1,6 @@
+{
+  "name": "StyleSense — Virtual Stylist",
+  "description": "Personalized outfit recommendations, color harmony analysis, wardrobe planning, and curated local styling rules in an elegant fashion-tech interface.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
